@@ -6,6 +6,7 @@ import {
   javascript,
   typescript,
   html,
+  aws,
   css,
   reactjs,
   redux,
@@ -16,6 +17,9 @@ import {
   figma,
   docker,
   threejs,
+  dockyard,
+  wordle,
+  mygpt,
 } from "../assets";
 
 export const navLinks = [
@@ -39,11 +43,11 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "React Developer",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Cloud Engineer",
     icon: backend,
   },
   {
@@ -82,6 +86,10 @@ const technologies = [
     icon: tailwind,
   },
   {
+    name: "AWS",
+    icon: aws,
+  },
+  {
     name: "Node JS",
     icon: nodejs,
   },
@@ -94,17 +102,83 @@ const technologies = [
     icon: threejs,
   },
   {
-    name: "git",
+    name: "Git",
     icon: git,
   },
   {
-    name: "figma",
+    name: "Figma",
     icon: figma,
   },
   {
-    name: "docker",
+    name: "Docker",
     icon: docker,
   },
 ];
 
-export { services, technologies };
+const projects = [
+  {
+    name: "MyGPT",
+    description:
+      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "aws",
+        color: "green-text-gradient",
+      },
+    ],
+    image: mygpt,
+    source_code_link: "https://github.com/taesookang/my_gpt",
+  },
+  {
+    name: "Dockyard",
+    description:
+      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "aws",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: dockyard,
+    source_code_link: "https://github.com/taesookang/dockyard",
+  },
+  {
+    name: "Wordle",
+    description:
+      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "redux",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: wordle,
+    source_code_link: "https://github.com/",
+  },
+];
+
+export { services, technologies, projects };

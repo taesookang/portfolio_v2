@@ -1,6 +1,7 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { useWindowSize } from "../../hooks";
 
 import { Loader as CanvasLoader } from "..";
 
@@ -34,33 +35,13 @@ export const Computers: React.FC<Props> = ({ isMobile }) => {
 };
 
 const ComputerCanvas: React.FC = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    // Add a listener for changes to the screen size
-    const mediaQuery: MediaQueryList = window.matchMedia("(max-width: 500px)");
-
-    // Set the initial value of the `isMobile` state variable
-    setIsMobile(mediaQuery.matches);
-
-    // Define a callback function to handle changes to the media query
-    const handleMediaQueryChange = (event: MediaQueryListEvent) => {
-      setIsMobile(event.matches);
-    };
-
-    // Add the callback function as a listener for changes to the media query
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
-
-    // Remove the listener when the component is unmounted
-    return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
-    };
-  }, []);
+  const windowWidth = useWindowSize().width;
+  const isMobile = windowWidth! < 640;
 
   return (
     <Canvas
-      frameloop="demand"
       shadows
+      frameloop="demand"
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}

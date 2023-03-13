@@ -20,6 +20,11 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import aws from "./tech/aws.png";
+
+import dockyard from "./works/dockyard.png";
+import mygpt from "./works/mygpt.png";
+import wordle from "./works/wordle.png";
 
 export {
   logo,
@@ -35,6 +40,7 @@ export {
   figma,
   git,
   html,
+  aws,
   javascript,
   mongodb,
   nodejs,
@@ -43,4 +49,7 @@ export {
   tailwind,
   typescript,
   threejs,
+  mygpt,
+  dockyard,
+  wordle,
 };

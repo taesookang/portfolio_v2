@@ -19,6 +19,11 @@ const ServiceCard: React.FC<Props> = ({ index, title, icon }) => {
       tiltMaxAngleX={45}
       tiltMaxAngleY={45}
       transitionSpeed={450}
+      glareEnable
+      glareMaxOpacity={0.4}
+      glareColor="#ffffff"
+      glarePosition="bottom"
+      glareBorderRadius="10px"
       className="xs:w-[250px] w-full"
     >
       <motion.div

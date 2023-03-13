@@ -12,6 +12,7 @@ export const Loader: React.FC = () => {
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
+        marginTop: 20,
       }}
     >
       <span className="canvas-loader" />
