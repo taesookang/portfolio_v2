@@ -177,7 +177,7 @@ const projects = [
       },
     ],
     image: wordle,
-    source_code_link: "https://github.com/wordle",
+    source_code_link: "https://github.com/taesookang/wordle",
   },
 ];
 
