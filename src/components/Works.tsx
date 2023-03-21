@@ -28,14 +28,12 @@ const ProjectCard: React.FC<Props> = ({
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
-        tiltMaxAngleX={45}
-        tiltMaxAngleY={45}
-        transitionSpeed={200}
         glareEnable
+        tiltEnable={false}
         glareMaxOpacity={0.4}
         glareColor="#ffffff"
         glarePosition="bottom"
-        glareBorderRadius="10px"
+        glareBorderRadius="6px"
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
         <div className="relative w-full aspect-[7/4] ">
